@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto Parts - Penguin">
+    <title>Auto Parts - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html" class="active">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="auto-parts">
+            <h1>Auto Parts</h1>
+            <p>We provide a wide range of high-quality auto parts for various vehicle makes and models. Our products are reliable and ensure optimal performance for your vehicle.</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/autoparts1.webp" alt="Auto Parts 1" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/autoparts2.jpg" alt="Auto Parts 2" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/autoparts3.jpg" alt="Auto Parts 3" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/autoparts4.jpg" alt="Auto Parts 4" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/autoparts5.jpg" alt="Auto Parts 5" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/autoparts6.jpg" alt="Auto Parts 6" class="service-img" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="background: #333; color: #fff; text-align: center; padding: 1rem 0; position: fixed; width: 100%; bottom: 0;">
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

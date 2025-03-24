@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Penguin">
+    <title>Contact Us - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main class="cont">
+        <section id="contact">
+            <form action="submit_form.php" method="post" class="contact-form">               
+            <h2>Contact Us</h2>
+                <label for="name" data-icon="&#xf007;" class="fas fa-user">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email" data-icon="&#xf0e0;" class="fas fa-envelope">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message" data-icon="&#xf075;" class="fas fa-comment">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+                <address>
+                    <p>Email: contact@penguin.asia</p>
+                    <p>Phone: +123 456 7890</p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

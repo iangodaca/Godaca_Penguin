@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trucking Services - Penguin">
+    <title>Trucking Services - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html" class="active">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="trucking-services">
+            <h1>Trucking Services</h1>
+            <p>We offer comprehensive trucking services to meet your transportation needs. Our fleet of trucks is equipped to handle a variety of cargo, ensuring safe and timely delivery.</p>
+            
+            <p>Contact us for proper quotation at (0923) 086 8342</p>
+            <p>We offer different trucking services, including:</p>
+            <ul>
+                <li>Boom Truck</li>
+            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/trucking1.jpg" alt="Trucking Services 1" class="service-img" style="width: 100%; height: 285px;">
+                </div>
+                <div class="card">
+                    <img src="img/trucking5.jpg" alt="Trucking Services 2" class="service-img" style="width: 100%; height: 285px;">
+                </div>
+                <div class="card">
+                    <img src="img/trucking6.jpg" alt="Trucking Services 3" class="service-img" style="width: 100%; height: 285px;">
+                </div>
+                <div class="card">
+                    <img src="img/trucking2.jpg" alt="Trucking Services 4" class="service-img" style="width: 100%; height: 285px;">
+                </div>
+                <div class="card">
+                    <img src="img/trucking3.jpg" alt="Trucking Services 5" class="service-img">
+                </div>
+                <div class="card">
+                    <img src="img/trucking4.jpg" alt="Trucking Services 6" class="service-img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

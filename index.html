@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Penguin - Your one-stop solution for all your needs.">
+    <title>Penguin Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div> 
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="overlay">
+        <main>
+        <section id="home" class="bg-image">
+            <div class="overlay">
+                <h1 class="fade-in">Welcome to Penguin</h1>
+                <p class="fade-in">Your one-stop solution for all your needs.</p>
+                <div class="content">
+                    <p>At Penguin, we offer a comprehensive range of services to cater to your every need. From bridal car services to heavy equipment rental, we have it all. Our team of professionals is dedicated to providing top-notch services to ensure your satisfaction.</p>
+                    <p>Explore our website to learn more about our services and how we can assist you. We are committed to delivering excellence in everything we do.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

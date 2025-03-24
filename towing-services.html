@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Towing Services - Penguin">
+    <title>Towing Services - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: fixed; width: 100%; top: 0; z-index: 1000;">
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html" class="active">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="towing-services">
+            <h1>Towing Services 24/7</h1>
+            <p>Our reliable towing services are available 24/7 to assist you in any roadside emergency. We ensure prompt and professional service to get you back on the road quickly.</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/towingservices1.avif" alt="Towing Services 1" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/towingservices2.jpg" alt="Towing Services 2" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/towingservices3.jpg" alt="Towing Services 3" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/towingservices4.jpg" alt="Towing Services 4" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <img src="img/towingservices5.jpg" alt="Towing Services 5" class="service-img" style="width: 100%; height: 260px;">
+                </div>
+                <div class="card">
+                    <video controls style="width: 100%; height: 260px;">
+                        <source src="img/towing.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <h2>Emergency Hotline: (0923) 086 8342</h2>
+            <p>We are proud to inform you that we can handle any type of towing requirements, no matter how complex or complicated.</p>
+            <h3>Provide the following details:</h3>
+            <ul>
+                <li>Pick up point</li>
+                <li>Drop off point</li>
+                <li>Vehicle type</li>
+            </ul>
+            <p>We are committed to providing fast, affordable, reliable towing and recovery services. We offer our services 24 hours a day, seven days a week. Whether it’s an old rusted antique that you wanted to turn into a project car or roadside emergency assistance, Penguin Towing can assist you. We do everything we can to work with your schedule. Get your free quote today.</p>
+            <h2>Our Services</h2>
+            <ul>
+                <li>24-Hour Towing & Roadside Assistance</li>
+                <li>Light-Duty Towing</li>
+                <li>Flatbed Towing</li>
+                <li>Long-Distance Towing</li>
+                <li>Isuzu 14 Feet Tow Truck</li>
+                <li>Self-loading Car Carrier</li>
+                <li>2018 McLaren 570s Coupe</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furniture Hotel & Residential - Penguin">
+    <title>Furniture Hotel & Residential - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="index.html#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html" class="active">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="furnitures">
+            <h1>Furniture Hotel & Residential</h1>
+            <p>We offer a wide range of furniture for hotels and residential properties. Our collection includes stylish and functional pieces to enhance the aesthetics of your space.</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/funitures1.avif" alt="Furniture Hotel & Residential 1" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/furnitures2.avif" alt="Furniture Hotel & Residential 2" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/furnitures3.avif" alt="Furniture Hotel & Residential 3" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/furnitures4.avif" alt="Furniture Hotel & Residential 4" class="service-img" style="width: 100%; height: auto;">
+                </div>
+                <div class="card">
+                    <img src="img/furnitures5.avif" alt="Furniture Hotel & Residential 5" class="service-img" style="width: 100%; height: 255px;">
+                </div>
+                <div class="card">
+                    <img src="img/furnitures6.avif" alt="Furniture Hotel & Residential 6" class="service-img" style="width: 100%; height: 255px;">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

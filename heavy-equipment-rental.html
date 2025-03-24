@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Heavy Equipment Rental - Penguin">
+    <title>Heavy Equipment Rental - Penguin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <div class="logo-container">
+            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
+            <span class="logo-text">Penguin Sales & Services Company</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button id="search-btn"></button>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="bridal-car-services.html">Bridal Car Services</a>
+                        <a href="towing-services.html">Towing Services 24/7</a>
+                        <a href="trucking-services.html">Trucking Services</a>
+                        <a href="heavy-equipment-rental.html" class="active">Heavy Equipment Rental</a>
+                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
+                        <a href="furnitures.html">Furniture Hotel & Residential</a>
+                        <a href="auto-parts.html">Auto Parts</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="heavy-equipment-rental">
+            <h1>Heavy Equipment Rental</h1>
+            <p>Our heavy equipment rental services provide you with the machinery you need for your construction projects. We offer a wide range of equipment to suit various requirements.</p>           
+            
+            <p>Contact us for proper quotation at (0923) 086 8342</p>
+            <p>Please provide the project details for proper quotation:</p>
+            <ul>
+                <li>Location</li>
+                <li>Scope of work/project</li>
+                <li>Hours</li>
+            </ul>
+            <div class="card-container">
+                <div class="card">
+                <img src="img/heavyequip1.webp" alt="Heavy Equipment Rental 1" class="service-img" style="width: 100%; height: 260px;">
+            </div>
+                <div class="card">
+            <img src="img/heavyequip2.jpg" alt="Heavy Equipment Rental 2" class="service-img" style="width: 100%; height: 260px;">
+            </div>
+            <div class="card">
+            <img src="img/heavyequip3.jpeg" alt="Heavy Equipment Rental 3" class="service-img" style="width: 100%; height: 260px;">
+            </div>
+            <div class="card">
+            <img src="img/heavyequip4.jpg" alt="Heavy Equipment Rental 4" class="service-img" style="width: 100%; height: 260px;">
+            </div>
+            <div class="card">
+            <img src="img/heavyequip5.webp" alt="Heavy Equipment Rental 5" class="service-img" style="width: 100%; height: 260px;">
+            </div>  
+            <div class="card">
+            <img src="img/heavyequip6.jpeg" alt="Heavy Equipment Rental 6" class="service-img" style="width: 100%; height: 260px;">
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
