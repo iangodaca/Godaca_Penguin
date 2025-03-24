@@ -5,64 +5,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Us - Penguin">
     <title>Contact Us - Penguin</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        /* Fade-in animation */
+        body {
+            background: linear-gradient(to right, #b6b6b6, #c3c3c3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Navbar Shrinking Effect */
+        .navbar-shrink {
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Hover Effects */
+        .social-links a:hover {
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Custom Navbar */
+        .navbar-brand img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        /* Form Styling */
+        .contact-form {
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .contact-form:hover {
+            transform: scale(1.02);
+        }
+
+        /* Form Inputs */
+        .contact-form input, 
+        .contact-form textarea {
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Submit Button */
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            transition: transform 0.2s ease-in-out, background 0.3s;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #17a2b8;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Custom Dropdown Styling */
+        .navbar .dropdown-menu {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border: none;
+            padding: 10px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Dropdown Item Styling */
+        .navbar .dropdown-menu .dropdown-item {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .navbar .dropdown-menu .dropdown-item:hover {
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            padding-left: 25px;
+        }
+
+        /* Dropdown Toggle Arrow */
+        .navbar .dropdown-toggle::after {
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            border: none;
+            margin-left: 8px;
+            font-size: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Rotate Arrow on Open */
+        .navbar .dropdown-toggle[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
+
+    </style>
 </head>
 <body>
-    <header style="position: fixed; width: 100%; top: 0; z-index: 1000;">
-        <div class="logo-container">
-            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
-            <span class="logo-text">Penguin Sales & Services Company</span>
-        </div>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search...">
-            <button id="search-btn"></button>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li class="dropdown">
-                    <a href="index.html#services" class="dropbtn">Services</a>
-                    <div class="dropdown-content">
-                        <a href="bridal-car-services.html">Bridal Car Services</a>
-                        <a href="towing-services.html">Towing Services 24/7</a>
-                        <a href="trucking-services.html">Trucking Services</a>
-                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
-                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
-                        <a href="furnitures.html">Furniture Hotel & Residential</a>
-                        <a href="auto-parts.html">Auto Parts</a>
-                    </div>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
-    <main class="cont">
-        <section id="contact">
-            <form action="submit_form.php" method="post" class="contact-form">               
-            <h2>Contact Us</h2>
-                <label for="name" data-icon="&#xf007;" class="fas fa-user">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email" data-icon="&#xf0e0;" class="fas fa-envelope">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message" data-icon="&#xf075;" class="fas fa-comment">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Submit</button>
-                <address>
-                    <p>Email: contact@penguin.asia</p>
-                    <p>Phone: +123 456 7890</p>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Penguin. All rights reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo.webp" alt="Penguin Logo" width="40" height="40" class="me-2">
+                <span>Penguin Sales & Services Company</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bridal-car-services.html">Bridal Car Services</a></li>
+                            <li><a class="dropdown-item" href="towing-services.html">Towing Services 24/7</a></li>
+                            <li><a class="dropdown-item" href="trucking-services.html">Trucking Services</a></li>
+                            <li><a class="dropdown-item" href="heavy-equipment-rental.html">Heavy Equipment Rental</a></li>
+                            <li><a class="dropdown-item" href="general-construction-maintenance-services.html">General Construction & Maintenance</a></li>
+                            <li><a class="dropdown-item" href="furnitures.html">Furniture (Hotel & Residential)</a></li>
+                            <li><a class="dropdown-item" href="auto-parts.html">Auto Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Contact Form Section -->
+        <section class="container mt-5 pt-5">
+            <div class="row">
+                <!-- Contact Form on the Left -->
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h2 class="text-center mb-4">Contact Us</h2>
+                        <form action="submit_form.php" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label"><i class="fas fa-comment"></i> Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100"><i class="fas fa-paper-plane"></i> Submit</button>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <p><i class="fas fa-envelope"></i> Email: <a href="info.qpssco@gmail.com">contact@penguin.asia</a></p>
+                            <p><i class="fas fa-phone"></i> Phone: <a href="tel:+1234567890">(0925) 551 0987</a></p>
+                            <p><i class="fas fa-phone-square"></i> Landline No.: <a href="tel:+1234567890">(046) 230 1426</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Content on the Right -->
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div class="p-4 bg-light rounded shadow-sm mb-4">
+                        <h4 class="text-center"><i class="fas fa-info-circle"></i> About Penguin</h4>
+                        <p class="text-center">Penguin Sales & Services Company is a leader in innovative business solutions, offering high-quality products and services tailored to meet the needs of modern enterprises. With a strong commitment to excellence, we provide cutting-edge technologies and customer-centric solutions to help businesses thrive.</p>
+                    </div>
+                    <div class="p-4 bg-light rounded shadow-sm mb-4">
+                        <h4 class="text-center"><i class="fas fa-map-marker-alt"></i> Our Location</h4>
+                        <p class="text-center">Penguin Sales & Services Company</p>
+                    </div>
+                </div>
+            </div>
+            </section>
+                        
+            <!-- Company Description -->
+            <div class="p-4 bg-light rounded shadow-sm mt-4">
+                <h4 class="text-center"><i class="fas fa-briefcase"></i> About Penguin Sales & Services Company</h4>
+                <p class="text-center">At Penguin Sales & Services Company, we are committed to delivering exceptional services across various sectors. Our offerings include Bridal Car Services, 24/7 Towing Services, Trucking Services, Heavy Equipment Rental, General Construction & Maintenance Services, Furniture for Hotels & Residential, and Auto Parts. We pride ourselves on our motto: "We Make It Happen." </p>
+            </div>
+            
+            <!-- Working Hours -->
+            <div class="p-3 bg-light rounded shadow-sm mt-4 text-center">
+                <h5><i class="fas fa-clock"></i> Office Hours</h5>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="p-3 bg-light rounded shadow-sm mt-4">
+                <h5 class="text-center"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h5>
+                <p><strong>What services do you offer?</strong><br>We provide a range of services including Bridal Car Services, 24/7 Towing Services, Trucking Services, Heavy Equipment Rental, General Construction & Maintenance Services, Furniture for Hotels & Residential, and Auto Parts. </p>
+                <p><strong>How can I contact you for a service inquiry?</strong><br>You can reach us through the contact form on our website or via the contact information provided on our Contact Us page. </p>
+                <p><strong>Where are you located?</strong><br>Our company is based in the Philippines, serving various regions with our diverse services. </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Chat Button -->
+<div class="live-chat-btn position-fixed bottom-3 end-3">
+    <button class="btn btn-success rounded-circle p-3 shadow"><i class="fas fa-comments"></i></button>
+</div>
+
+
+<!-- Footer (Same as About Us) -->
+<footer class="footer mt-5">
+    <div class="container">
+        <p>&copy; 2025 Penguin. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a> |
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>

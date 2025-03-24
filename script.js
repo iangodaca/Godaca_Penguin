@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerText = 'Top';
-    backToTopBtn.classList.add('back-to-top');
+    backToTopBtn.classList.add('btn', 'btn-primary', 'back-to-top');
     document.body.appendChild(backToTopBtn);
 
     backToTopBtn.addEventListener('click', () => {

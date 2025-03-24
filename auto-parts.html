@@ -5,78 +5,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Auto Parts - Penguin">
     <title>Auto Parts - Penguin</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Bootstrap & AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Navbar Shrinking Effect */
+        .navbar-shrink {
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.9) !important;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Hover Effects */
+        .social-links a:hover {
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease-in-out;
+        }
+        body {
+            padding-top: 80px;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+        }
+        .dropdown-menu a {
+            color: #000;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Search Button Hover Effect */
+        #search-btn {
+            transition: all 0.3s ease-in-out;
+        }
+
+        #search-btn:hover {
+            transform: scale(1.1);
+            background-color: #ff4757;
+            color: white;
+        }
+
+        /* Card Hover Effect */
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-in Effect for Sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal Fade-in Effect */
+        .modal-content {
+            animation: zoomIn 0.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+        /* Custom Dropdown Styling */
+        .navbar .dropdown-menu {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border: none;
+            padding: 10px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Dropdown Item Styling */
+        .navbar .dropdown-menu .dropdown-item {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .navbar .dropdown-menu .dropdown-item:hover {
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            padding-left: 25px;
+        }
+
+        /* Dropdown Toggle Arrow */
+        .navbar .dropdown-toggle::after {
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            border: none;
+            margin-left: 8px;
+            font-size: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Rotate Arrow on Open */
+        .navbar .dropdown-toggle[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="img/logo.webp" alt="Penguin Asia Logo" class="logo-img">
-            <span class="logo-text">Penguin Sales & Services Company</span>
-        </div>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search...">
-            <button id="search-btn"></button>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li class="dropdown">
-                    <a href="index.html#services" class="dropbtn">Services</a>
-                    <div class="dropdown-content">
-                        <a href="bridal-car-services.html">Bridal Car Services</a>
-                        <a href="towing-services.html">Towing Services 24/7</a>
-                        <a href="trucking-services.html">Trucking Services</a>
-                        <a href="heavy-equipment-rental.html">Heavy Equipment Rental</a>
-                        <a href="general-construction-maintenance-services.html">General Construction & Maintenance Services</a>
-                        <a href="furnitures.html">Furniture Hotel & Residential</a>
-                        <a href="auto-parts.html" class="active">Auto Parts</a>
-                    </div>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo.webp" alt="Logo" class="me-2" height="40">
+                <span>Penguin Sales & Services Company</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bridal-car-services.html">Bridal Car Services</a></li>
+                            <li><a class="dropdown-item" href="towing-services.html">Towing Services 24/7</a></li>
+                            <li><a class="dropdown-item" href="trucking-services.html">Trucking Services</a></li>
+                            <li><a class="dropdown-item" href="heavy-equipment-rental.html">Heavy Equipment Rental</a></li>
+                            <li><a class="dropdown-item" href="general-construction-maintenance-services.html">General Construction & Maintenance</a></li>
+                            <li><a class="dropdown-item" href="furnitures.html">Furniture Hotel & Residential</a></li>
+                            <li><a class="dropdown-item active" href="auto-parts.html">Auto Parts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section id="auto-parts">
-            <h1>Auto Parts</h1>
-            <p>We provide a wide range of high-quality auto parts for various vehicle makes and models. Our products are reliable and ensure optimal performance for your vehicle.</p>
-            <div class="card-container">
-                <div class="card">
-                    <img src="img/autoparts1.webp" alt="Auto Parts 1" class="service-img" style="width: 100%; height: auto;">
+        </div>
+    </nav><main>
+        <section id="auto-parts" class="container py-5">
+            <h1 class="text-center mb-4">Auto Parts</h1>
+            <p class="text-center">We provide a wide range of high-quality auto parts for various vehicle makes and models. Our products are reliable and ensure optimal performance for your vehicle.</p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts1.webp" alt="Auto Parts 1" class="card-img-top">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/autoparts2.jpg" alt="Auto Parts 2" class="service-img" style="width: 100%; height: 260px;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts2.jpg" alt="Auto Parts 2" class="card-img-top" style="height: 310px; object-fit: cover;">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/autoparts3.jpg" alt="Auto Parts 3" class="service-img" style="width: 100%; height: 260px;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts3.jpg" alt="Auto Parts 3" class="card-img-top" style="height: 310px; object-fit: cover;">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/autoparts4.jpg" alt="Auto Parts 4" class="service-img" style="width: 100%; height: auto;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts4.jpg" alt="Auto Parts 4" class="card-img-top">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/autoparts5.jpg" alt="Auto Parts 5" class="service-img" style="width: 100%; height: auto;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts5.jpg" alt="Auto Parts 5" class="card-img-top">
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/autoparts6.jpg" alt="Auto Parts 6" class="service-img" style="width: 100%; height: auto;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/autoparts6.jpg" alt="Auto Parts 6" class="card-img-top">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer style="background: #333; color: #fff; text-align: center; padding: 1rem 0; position: fixed; width: 100%; bottom: 0;">
-        <p>&copy; 2025 Penguin. All rights reserved.</p>
+
+    <!-- Footer (Same as About Us) -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2025 Penguin. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a> |
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </p>
+        </div>
     </footer>
+
     <!-- Modal -->
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modal-img" class="img-fluid">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        AOS.init(); // Initialize AOS animations
+        
+        // Navbar Shrinking Effect
+        window.addEventListener("scroll", function() {
+            let navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("navbar-shrink", window.scrollY > 50);
+        });
+    </script>
+
+    <script>
+        // Modal Image Preview
+        document.querySelectorAll('.card img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('modal-img').src = this.src;
+                new bootstrap.Modal(document.getElementById('imageModal')).show();
+            });
+        });
+    </script>
+
 </body>
 </html>
+
