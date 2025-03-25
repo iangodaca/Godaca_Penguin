@@ -11,17 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <style>
-        /* Navbar Shrinking Effect */
+        body {
+            font-family:'Courier New', Courier, monospace;
+            margin: 0;
+            overflow-x: hidden;
+        }
         .navbar-shrink {
             padding: 10px 0;
             background-color: rgba(0, 0, 0, 0.9) !important;
             transition: all 0.3s ease-in-out;
-        }
-        
-        /* Hover Effects */
-        .social-links a:hover {
-            transform: scale(1.2);
-            transition: 0.3s ease-in-out;
         }
         
         .card:hover {
@@ -99,14 +97,52 @@
             to { transform: scale(1); opacity: 1; }
         }
 
-        /* Footer Styling */
-        footer {
-            background: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
-        }
+
+    /* Quick Links Hover */
+    .footer-link {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out, transform 0.2s;
+    }
+    .footer-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+    }
+    .footer-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .footer-link:hover {
+        color: #ffc107;
+        transform: translateX(5px);
+    }
+
+    /* Social Media Icons Hover */
+    .social-link {
+        color: #ffffff;
+        margin: 0 8px;
+        transition: transform 0.3s, color 0.3s;
+    }
+    .social-link:hover {
+        color: #ffc107;
+        transform: scale(1.2);
+    }
+
+    /* Footer Fade-in Animation */
+    .footer {
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
         /* Custom Dropdown Styling */
         .navbar .dropdown-menu {
             background-color: #ffffff;
@@ -189,13 +225,13 @@
     </nav>
  
     
-    <main class="container mt-5 pt-5">
-        <section id="trucking-services" class="text-center">
-            <h1 class="fw-bold">Trucking Services</h1>
-            <p class="lead">We offer comprehensive trucking services to meet your transportation needs.</p>
-            <div class="alert alert-primary" role="alert">
-                <i class="bi bi-telephone-fill"></i> Contact us for a quotation at (0923) 086 8342
-            </div>
+    <main>
+        <section id="trucking-services" class="container py-5">
+            <h1 class="text-center mb-4">Trucking Services</h1>
+            <p class="text-center fs-5">We offer comprehensive trucking services to meet your transportation needs.</p>
+            <p class="text-center">
+                <i class="bi bi-telephone-fill text-center"></i> Contact us for a quotation at (0923) 086 8342
+            </p>
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card">
@@ -230,16 +266,45 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer (Same as About Us) -->
-    <footer class="footer mt-5">
+        
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-4">
         <div class="container">
-            <p>&copy; 2025 Penguin. All rights reserved.</p>
-            <p>Follow us on 
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a> |
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            </p>
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Penguin Sales & Services</h5>
+                    <p>Your trusted partner for quality services, from vehicle rentals to construction solutions.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i> <span class="ms-2">Home</span></a></li>
+                        <li><a href="about.html" class="footer-link"><i class="fas fa-info-circle"></i><span class="ms-2"> About Us</span></a></li>
+                        <li><a href="services.html" class="footer-link"><i class="fas fa-cogs"></i><span class="ms-1"> Our Services</span></a></li>
+                        <li><a href="contact.html" class="footer-link"><i class="fas fa-envelope"></i><span class="ms-2"> Contact</span></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Contact Us</h5>
+                    <p><i class="fas fa-phone"></i> +63 912 345 6789</p>
+                    <p><i class="fas fa-envelope"></i> info@penguinservices.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bago City, Negros Occidental, Philippines</p>
+                </div>
+                    <!-- Social Media Links -->
+                    <div class="col-md-3">
+                        <h5 class="fw-bold">Follow Us</h5>
+                        <a href="#" class="social-link"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+            </div>
+            <hr class="my-3">
+            <p class="text-center mb-0">&copy; 2024 Penguin Sales & Services. All Rights Reserved.</p>
         </div>
     </footer>
 
